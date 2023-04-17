@@ -1,0 +1,81 @@
+{
+  "history_length": 10,
+  "kde_threshold": 0.25,
+  "submit_anomaly_threshold": 300,
+  "submit_span_threshold": 120,
+  "anomaly_num_threshold": 8,
+  "kpi_group": {
+    "sda_DSK": [
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKWTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKReadWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKBps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sda_DSKPercentBusy"
+    ],
+    "sdb_DSK": [
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKWTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKReadWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKBps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdb_DSKPercentBusy"
+    ],
+    "sdc_DSK": [
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKWTps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKReadWrite",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKBps",
+      "OSLinux-OSLinux_LOCALDISK_LOCALDISK-sdc_DSKPercentBusy"
+    ],
+    "CPU_CPU": [
+      "OSLinux-CPU_CPU_CPUCpuUtil",
+      "OSLinux-CPU_CPU_CPUidleutil",
+      "OSLinux-CPU_CPU_CPULoad",
+      "OSLinux-CPU_CPU_CPUUserTime"
+    ],
+    "MEMORY": [
+      "OSLinux-OSLinux_MEMORY_MEMORY_CacheMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_MEMFreeMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_NoCacheMemPerc",
+      "OSLinux-OSLinux_MEMORY_MEMORY_UserMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_MEMUsedMemPerc",
+      "gc"
+    ],
+    "NETWORK": [
+      "OSLinux-OSLinux_NETWORK_NETWORK_TCP-FIN-WAIT",
+      "OSLinux-OSLinux_NETWORK_NETWORK_TCP-CLOSE-WAIT",
+      "gc"
+    ],
+    "JVM": [
+      "JVM-Memory_7778_JVM_Memory_NoHeapMemoryUsed",
+      "JVM-Operating System_7778_JVM_JVM_CPULoad",
+      "OSLinux-OSLinux_MEMORY_MEMORY_CacheMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_MEMFreeMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_NoCacheMemPerc",
+      "OSLinux-OSLinux_MEMORY_MEMORY_UserMem",
+      "OSLinux-OSLinux_MEMORY_MEMORY_MEMUsedMemPerc",
+      "gc"
+    ]
+  },
+  "commit_address": "http://10.3.2.25:5001/standings/submit/",
+  "kafka_address": [
+    "10.3.2.41:9092",
+    "10.3.2.4:9092",
+    "10.3.2.36:9092"
+  ],
+  "kpi_topic": "b-kpi",
+  "metric_topic": "b-metric",
+  "trace_topic": "b-trace",
+  "log_topic": "b-log",
+  "kpi_ignore_keyword": [
+    "PROCESS",
+    "MySQL_3306",
+    "Tomcat"
+  ],
+  "decision_port": 5001,
+  "log_keyword": "Full GC",
+  "use_trace": false,
+  "submission_limit": 7
+}

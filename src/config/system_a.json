@@ -1,0 +1,80 @@
+{
+  "history_length": 10,
+  "kde_threshold": 0.26,
+  "submit_anomaly_threshold": 300,
+  "submit_span_threshold": 120,
+  "anomaly_num_threshold": 5,
+  "kpi_group": {
+    "system.disk": [
+      "system.disk.free",
+      "system.disk.pct_usage",
+      "system.disk.used"
+    ],
+    "system.mem": [
+      "system.mem.buffered",
+      "system.mem.cached",
+      "system.mem.slab",
+      "weblogic.can_connect"
+    ],
+    "system.load": [
+      "system.load.1.pct",
+      "system.cpu.pct_usage",
+      "system.load.norm.5",
+      "system.load.norm.1",
+      "system.load.1",
+      "system.cpu.user",
+      "system.load.5",
+      "system.load.15",
+      "system.load.norm.15",
+      "system.cpu.i_dle",
+      "system.cpu.idle"
+    ],
+    "system.cpu": [
+      "system.load.1.pct",
+      "system.cpu.pct_usage",
+      "system.load.norm.5",
+      "system.load.norm.1",
+      "system.load.1",
+      "system.cpu.user",
+      "system.load.5",
+      "system.load.15",
+      "system.load.norm.15",
+      "system.cpu.i_dle",
+      "system.cpu.idle",
+      "weblogic.can_connect"
+    ],
+    "system.net": [
+      "system.tcp.last_ack",
+      "system.tcp.syn_recv",
+      "system.net.packets_out.count",
+      "system.tcp.time_wait",
+      "system.tcp.fin_wait1",
+      "system.net.tcp.in_segs",
+      "system.net.tcp.retrans_segs",
+      "system.net.bytes_sent",
+      "system.net.tcp.out_segs",
+      "system.net.bytes_rcvd",
+      "system.tcp.established",
+      "system.net.packets_in.count"
+    ]
+  },
+  "commit_address": "http://10.3.2.25:5000/standings/submit/",
+  "kafka_address": [
+    "10.3.2.41:9092",
+    "10.3.2.4:9092",
+    "10.3.2.36:9092"
+  ],
+  "kpi_topic": "a-kpi",
+  "metric_topic": "a-metric",
+  "trace_topic": "a-trace",
+  "log_topic": "a-log",
+  "kpi_ignore_keyword": [
+    "system.io",
+    "system.tcp",
+    "system.udp"
+  ],
+  "decision_port": 5000,
+  "log_keyword": "Error",
+  "use_trace": false,
+  "submission_limit": 13
+}
